@@ -1,0 +1,114 @@
+::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+	color: $lightblue;
+	background-color: $trueblue;
+}
+
+.index-container {
+	height: 900px;
+	margin: auto;
+
+	.title {
+		font-size: 40px;
+		margin-bottom: 40px;
+		padding: 10% 0 0 0;
+		font-family: 'Rock Salt', cursive;
+	}
+
+	.redux-container {
+		width: 800px;
+		margin: auto;
+	}
+
+	.counter-container {
+		width: 50%;
+		float: left;
+		margin-bottom: 40px;
+
+		.button-container {
+			padding-top: 20px;
+		}
+
+		button {
+			margin: 0 20px;
+		}
+
+		h1 {
+			letter-spacing: 5px;
+			margin-bottom: 15px;
+			text-shadow: 1px 1px 5px $trueblue;
+		}
+
+		p {
+			font-family: 'Roboto', sans-serif;
+		}
+
+		button:focus {
+			@extend .no-link-focus;
+		}
+	}
+}
+
+.form-container {
+	width: 50%;
+	float: right;
+	margin-bottom: 100px;
+
+	form {
+		margin-bottom: 30px;
+	}
+
+	input {
+		width: 100%;
+		margin-bottom: 10px;
+		outline: none;
+		border: none;
+		background-color: transparent;
+		border-bottom: 1px solid $lightblue;
+	}
+
+	button:focus {
+		@extend .no-link-focus;
+	}
+}
+
+.no-link-focus {
+	text-decoration: none;
+	outline: 0 !important;
+	border: none;
+}
+
+.reset-container {
+	width: 50%;
+	float: left;
+	margin-bottom: 100px;
+
+	form {
+		margin-bottom: 30px;
+	}
+
+	input {
+		width: 100%;
+		margin-bottom: 10px;
+		outline: none;
+		border: none;
+		background-color: transparent;
+		border-bottom: 1px solid $lightblue;
+	}
+
+	button:focus {
+		@extend .no-link-focus;
+	}
+}
+
+.wrapper {
+	width: 100%;
+	overflow: scroll;
+}
