@@ -48,7 +48,7 @@ IMPORTANT NOTE: INITIAL STATE CAN BE ANYTHING: an object, an array, a string, a 
 */
 
 // In the reducer below, we'll be setting the initial state to 0 (a number)
-// Since we're just manipulatng and returning the state, in the Redux store, it'll be: state.counterValue (see bottom of page)
+// Since we're just manipulatng and returning the state, in the Redux store, it'll be: state.counterValue (see rootReducer below)
 const counterReducer = (state = 0, action) => {
 	switch (action.type) {
 		case DECREASE_COUNTER:
@@ -64,8 +64,8 @@ const counterReducer = (state = 0, action) => {
 
 // In the reducer below, we'll be setting initial state as an empty object
 // We need to spread the state out to either create or update a property, otherwise, it'll just be overwritten on subsequent calls
-// So our state for this reducer would be in the Redux store as: state.input.string and state.input.value (see bottom of page)
-const inputString = (state = {}, action) => {
+// So our state for this reducer would be in the Redux store as: state.inputValue.string and state.inputValue.value (see rootReducer below)
+const inputStringReducer = (state = {}, action) => {
 	switch (action.type) {
 		case RESET_INPUTS:
 			return { ...state, string: '', number: '' };
@@ -81,10 +81,10 @@ const inputString = (state = {}, action) => {
 // WE NEED TO COMBINE THE REDUCERS BEFORE PASSING IT OFF TO configureStore.jsx
 // SEE STEP 3 store/configureStore.jsx FOR MORE INFORMATION ON WHAT HAPPENS NEXT
 const rootReducer = combineReducers({
-	// we set the counterReducer reducer's state value in Redux state as: state.counterValue
+	// we set the counterReducer's state value in Redux state as: state.counterValue
 	counterValue: counterReducer,
-	// we set the inputReducer reducer's state values in Redux state as: state.inputValue.someOtherValue
-	inputValue: inputString,
+	// we set the inputReducer's state values in Redux state as: state.inputValue.someOtherValue
+	inputValue: inputStringReducer,
 	routing
 });
 

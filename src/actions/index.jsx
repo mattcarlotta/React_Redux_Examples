@@ -1,4 +1,4 @@
-// ACTION TYPES IMPORTED FROM types.jsx -- WE'LL BE UTILIZING THESE TO CREATE A 1:1 = ACTIONCREATOR TO REDUCER
+// ACTION TYPES IMPORTED FROM types.jsx -- WE'LL BE UTILIZING THESE TO CREATE A 1:1 = ACTION CREATOR : REDUCER
 import {
 	INCREASE_COUNTER,
 	DECREASE_COUNTER,
@@ -72,7 +72,7 @@ export const resetInputs = () => {
 // resets all Redux data
 export const resetAll = dispatch => {
 	// Thunk is mainly used for promises, so, for example:
-	// Let's say we send a succesful AJAX request with our inputs to an API,
+	// Let's say we send a successful AJAX request with our inputs to an API,
 	// the promise gets resolved, then we have to dispatch some secondary actions
 	// to wipe out the data -- with Thunk we DO NOT need to return any types/data
 	// just functions
