@@ -1,22 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import Counter from '../containers/counter';
-import Inputs from '../containers/Inputs';
-import Thunk from '../containers/thunk';
+import Results from '../containers/results';
 
 const Home = () => {
 	return (
-		<div className="index-container text-center">
+		<div className="container">
 			<h1 className="title">React and Redux Examples</h1>
-			<div className="redux-container">
-				<Counter />
-				<Inputs />
-				<Thunk />
-				<Link to="/test-page" className="btn btn-success">
-					Click To Go Test Page
-				</Link>
-			</div>
+			<Link className="btn btn-success" to="/test-page">
+				Go To Test Page
+			</Link>
+			<Results />
 		</div>
 	);
 };

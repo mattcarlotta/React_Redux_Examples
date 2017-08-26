@@ -1,18 +1,16 @@
 import React from 'react';
-import { browserHistory } from 'react-router';
+import { Link } from 'react-router';
 
 const TestPage = () => {
 	return (
-		<div className="text-center">
+		<div className="container">
 			<h1>
-				This is a dummy page. Your Redux state will persist despite changing
-				routes.
+				This is a dummy page. Your Redux state will still persist despite moving
+				to a completely different route without any hooked up Redux store.
 			</h1>
-			<button
-				className="btn btn-primary"
-				onClick={() => browserHistory.goBack()}>
+			<Link className="btn btn-primary" to="/">
 				Go Back
-			</button>
+			</Link>
 		</div>
 	);
 };

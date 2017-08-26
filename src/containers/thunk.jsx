@@ -7,8 +7,8 @@ import { resetAll } from '../actions';
 // SINCE WE'RE NOT UTILIZING REACT STATE, A STATELESS FUNCTION WILL DO -- CAN USE CLASSES IF NEEDED, DOESN'T CHANGE REDUX SETUP
 const resetAllReduxState = ({ resetAll }) => {
 	return (
-		<div className="reset-container text-center">
-			<h1>Redux Thunk</h1>
+		<div>
+			<h1>Redux Thunk:</h1>
 			<div className="button-container">
 				<button className="btn btn-danger" onClick={resetAll}>
 					Reset All Data

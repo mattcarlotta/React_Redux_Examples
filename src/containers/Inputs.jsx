@@ -35,8 +35,8 @@ class Input extends Component {
 	render() {
 		const { string, number } = this.props;
 		return (
-			<div className="form-container text-center">
-				<h1>Inputs</h1>
+			<div>
+				<h1>Input a String or Value</h1>
 				<p>
 					This is your submitted string value: {string ? string : '(empty)'}
 				</p>
@@ -48,6 +48,7 @@ class Input extends Component {
 						value={this.state.string}
 						onChange={this.handleChange}
 					/>
+					<br />
 					<button className="btn btn-primary" type="Submit">
 						Submit String
 					</button>
@@ -63,6 +64,7 @@ class Input extends Component {
 						value={this.state.number}
 						onChange={this.handleChange}
 					/>
+					<br />
 					<button className="btn btn-primary" type="Submit">
 						Submit Number
 					</button>

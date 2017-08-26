@@ -9,10 +9,10 @@ import { increaseCounter, decreaseCounter } from '../actions';
 // SINCE WE'RE NOT UTILIZING REACT STATE, A STATELESS FUNCTION WILL DO -- CAN USE CLASSES IF NEEDED, DOESN'T CHANGE REDUX SETUP
 const Counter = ({ counter, increaseCounter, decreaseCounter }) => {
 	return (
-		<div className="counter-container text-center">
-			<h1>Counter</h1>
+		<div>
+			<h1>Increase or Decrease The Counter</h1>
 			{counter}
-			<div className="button-container">
+			<div className="counter-button-container">
 				<button className="btn btn-primary" onClick={increaseCounter}>
 					<i className="fa fa-plus" aria-hidden="true" />
 				</button>
