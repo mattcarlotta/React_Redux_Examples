@@ -79,7 +79,6 @@ const inputStringReducer = (state = {}, action) => {
 };
 
 // WE NEED TO COMBINE THE REDUCERS BEFORE PASSING IT OFF TO configureStore.jsx
-// SEE STEP 3 store/configureStore.jsx FOR MORE INFORMATION ON WHAT HAPPENS NEXT
 const rootReducer = combineReducers({
 	// we set the counterReducer's state value in Redux state as: state.counterValue
 	counterValue: counterReducer,
@@ -88,4 +87,5 @@ const rootReducer = combineReducers({
 	routing
 });
 
+// SEE STEP 3 store/configureStore.jsx FOR MORE INFORMATION ON WHAT HAPPENS NEXT
 export default rootReducer;

@@ -3,7 +3,7 @@ import thunk from 'redux-thunk';
 import rootReducer from '../reducers';
 
 /*
-STEP 3: TAKES ALL THE REDUCERS AND ITS INITIAL STATE FROM reducers/index.jsx AND COMBINES SOME REDUX MIDDLEWARES
+STEP 3: TAKES ALL THE REDUCERS AND ITS INITIAL STATE FROM reducers/index.jsx AND COMBINES ANY REDUX MIDDLEWARES
 */
 
 // Creates the store with our reducers, setting any initial state found in our Reducer's first argument, and include any Redux middlewares
