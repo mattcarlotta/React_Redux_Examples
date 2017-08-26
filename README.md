@@ -6,8 +6,6 @@ Customs include:
 - react-bootstrap
 - react-redux
 - react-router-redux
-- react-scroll
-- react-slick
 - react-transition-group v1.2.0 (v2+ doesn't have thorough enough docs yet)
 - redux
 - redux-form

@@ -27,13 +27,3 @@ src/**/*.css
 
 # image files are in src now
 src/images
-
-# public folder
-/public
-
-# eject create-react-app scripts
-/scripts
-
-/uploads
-test-upload.txt
-Contact GitHub API Training Shop Blog About
