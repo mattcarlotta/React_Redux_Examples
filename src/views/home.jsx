@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 import Counter from '../containers/counter';
 import Inputs from '../containers/Inputs';
@@ -12,6 +13,9 @@ const Home = () => {
 				<Counter />
 				<Inputs />
 				<Thunk />
+				<Link to="/test-page" className="btn btn-success">
+					Click To Go Test Page
+				</Link>
 			</div>
 		</div>
 	);
