@@ -9,15 +9,12 @@ import { syncHistoryWithStore } from 'react-router-redux';
 // IMPORT configureStore (THE REDUX STORE)
 import configureStore from '../store/configureStore';
 
-// SET CONST store TO BE THE CONFIGURED/UPDATED WITH THE REDUX STORE FROM store/configureStore.jsx
+// SET const store TO BE THE CONFIGURED REDUX STORE FROM store/configureStore.jsx
 const store = configureStore();
 // THEN ALLOW IT TO BE SYNCED WITH browserHistory
 const history = syncHistoryWithStore(browserHistory, store);
 
-/*
-STEP 4: THE APP WILL NOW BE CONFIGURED/UPDATED WITH REDUX STORE, BROWSERHISTORY AND ROUTES
-THEN IT'LL BE PASSED TO src/Index.jsx TO BE RENDERED BY REACTDOM.RENDER
-*/
+/* THE APP WILL NOW BE CONFIGURED/UPDATED WITH REDUX STORE, BROWSERHISTORY AND ROUTES */
 
 const App = () => {
 	return (
@@ -27,4 +24,5 @@ const App = () => {
 	);
 };
 
+// THEN APP FUNCTION WILL BE PASSED TO src/Index.jsx TO BE RENDERED BY render (REACTDOM.RENDER)
 export default App;

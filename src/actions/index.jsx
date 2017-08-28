@@ -9,7 +9,7 @@ import {
 } from './types';
 
 /*
-STEP 1: USER TRIGGERS AN ACTION CREATOR
+USER TRIGGERS AN ACTION CREATOR
 
 - OUR ACTION CREATORS WILL ALWAYS RETURN AT MINIMUM A type FOR A REDUCER TO COMPARE AGAINST.
 - OUR REDUCERS **TYPICALLY** EXPECT A type AND A value RETURNED FROM OUR ACTION CREATORS...
@@ -18,11 +18,15 @@ STEP 1: USER TRIGGERS AN ACTION CREATOR
 	IN THE STRING/NUMBER EXAMPLE BELOW, THE VALUE IS SET FROM THE REACT COMPONENT AND PASSED TO
 	THE ACTION CREATOR, THEN PASSED TO THE REDUCER, SO ITS REDUCER NEEDS A type AND value.
 
-SEE STEP 2 reducers/index.jsx FOR MORE INFORMATION ON WHAT HAPPENS AFTER THE type AND value (if required) ARE RETURNED
+SEE reducers/index.jsx FOR MORE INFORMATION ON WHAT HAPPENS AFTER THE type AND value (if required) ARE RETURNED
 */
 
 // Increases counter by 1
 export const increaseCounter = () => {
+	console.log(
+		'Step 2: The increaseCounter action creator has now returned type: "INCREASE_COUNTER" to the reducers' +
+			' -- @@actions/index.jsx'
+	);
 	return {
 		type: INCREASE_COUNTER
 	};
@@ -30,6 +34,10 @@ export const increaseCounter = () => {
 
 // Decreases counter by 1
 export const decreaseCounter = () => {
+	console.log(
+		'Step 2: The decreaseCounter action creator has now returned type: "DECREASE_COUNTER" to the reducers' +
+			' -- @@actions/index.jsx'
+	);
 	return {
 		type: DECREASE_COUNTER
 	};

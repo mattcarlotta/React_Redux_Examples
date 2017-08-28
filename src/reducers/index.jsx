@@ -12,7 +12,7 @@ import {
 } from '../actions/types';
 
 /*
-STEP 2: THE ACTION CREATOR HAS RETURNED A type AND value (if required)
+THE ACTION CREATOR HAS RETURNED A type AND value (if required)
 
 HERE'S A BREAKDOWN OF A REDUCER (see function below afterward)...
 
@@ -50,10 +50,27 @@ IMPORTANT NOTE: INITIAL STATE CAN BE ANYTHING: an object, an array, a string, a 
 // In the reducer below, we'll be setting the initial state to 0 (a number)
 // Since we're just manipulatng and returning the state, in the Redux store, it'll be: state.counterValue (see rootReducer below)
 const counterReducer = (state = 0, action) => {
+	if (
+		action.type === 'INCREASE_COUNTER' ||
+		action.type === 'DECREASE_COUNTER'
+	) {
+		console.log(
+			`Step 3: The counterReducer has received type: "${action.type}" and is going to iterate over its switch cases` +
+				' -- @@reducers/index.jsx'
+		);
+	}
 	switch (action.type) {
 		case DECREASE_COUNTER:
+			console.log(
+				`Step 4: Type match found, Redux state.counterValue was decreased by 1` +
+					' -- @@reducers/index.jsx'
+			);
 			return state - 1;
 		case INCREASE_COUNTER:
+			console.log(
+				`Step 4: Type match found, Redux state.counterValue was increased by 1` +
+					' -- @@reducers/index.jsx'
+			);
 			return state + 1;
 		case RESET_COUNTER:
 			return 0;
@@ -66,6 +83,15 @@ const counterReducer = (state = 0, action) => {
 // We need to spread the state out to either create or update a property, otherwise, it'll just be overwritten on subsequent calls
 // So our state for this reducer would be in the Redux store as: state.inputValue.string and state.inputValue.value (see rootReducer below)
 const inputStringReducer = (state = {}, action) => {
+	if (
+		action.type === 'INCREASE_COUNTER' ||
+		action.type === 'DECREASE_COUNTER'
+	) {
+		console.log(
+			`Step 5: The inputStringReducer has also received a counter type: "${action.type}" and is going to iterate over its switch cases` +
+				' -- @@reducers/index.jsx'
+		);
+	}
 	switch (action.type) {
 		case RESET_INPUTS:
 			return { ...state, string: '', number: '' };
@@ -74,6 +100,15 @@ const inputStringReducer = (state = {}, action) => {
 		case SET_NUMBER:
 			return { ...state, number: action.numberValue };
 		default:
+			if (
+				action.type === 'INCREASE_COUNTER' ||
+				action.type === 'DECREASE_COUNTER'
+			) {
+				console.log(
+					`Step 6: No match was found, the inputStringReducer reducer did not update any Redux state` +
+						' -- @@reducers/index.jsx'
+				);
+			}
 			return state;
 	}
 };
@@ -87,5 +122,5 @@ const rootReducer = combineReducers({
 	routing
 });
 
-// SEE STEP 3 store/configureStore.jsx FOR MORE INFORMATION ON WHAT HAPPENS NEXT
+// SEE store/configureStore.jsx FOR MORE INFORMATION
 export default rootReducer;
